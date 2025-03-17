@@ -3,7 +3,7 @@ import random
 from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel
 from PyQt5.QtCore import Qt, QRect
 
-class MouseTrackerWindow(QMainWindow):
+class MouseTrack(QMainWindow):
   def __init__(self):
     super().__init__()
     self.setWindowTitle("Tugas 3_F1D022055_Lalu Bisma Kurniawan Haris")
@@ -40,7 +40,7 @@ class MouseTrackerWindow(QMainWindow):
     if self.label.geometry().contains(event.pos()):
       self.move_label_randomly()
 
-  def move_label_randomly(self):
+  def move_random(self):
     """Move label to a random position within window"""
     window_width = self.width()
     window_height = self.height()
@@ -75,7 +75,7 @@ class MouseTrackerWindow(QMainWindow):
 
 def main():
   app = QApplication(sys.argv)
-  window = MouseTrackerWindow()
+  window = MouseTrack()
   window.show()
   sys.exit(app.exec_())
 
