@@ -38,7 +38,7 @@ class MouseTrack(QMainWindow):
     
     # Hover Check
     if self.label.geometry().contains(event.pos()):
-      self.move_label_randomly()
+      self.move_random()
 
   def move_random(self):
     """Move label to a random position within window"""
